@@ -63,23 +63,23 @@ if (message.content === "!avatar") {
 }
 
 if (message.content.startsWith("!clear")) {
-    ...
+
 }
 
 if (message.content.startsWith("!kick")) {
-    ...
+
 }
 
 if (message.content.startsWith("!ban")) {
-    ...
+
 }
 
 if (message.content.startsWith("!timeout")) {
-    ...
+
 }
 
 if (message.content.startsWith("!say")) {
-    ...
+
 }
 
     // Skip moderators
