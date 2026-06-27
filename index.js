@@ -24,6 +24,43 @@ client.on('messageCreate', async (message) => {
     if (!message.guild || message.author.bot) return;
 
     const member = message.member;
+                // ===== Commands =====
+
+if (message.content === "!ping") {
+    return message.reply("🏓 Pong!");
+}
+
+if (message.content === "!help") {
+    return message.reply(`
+🛡️ **FuzzGuard Commands**
+
+!ping - Check bot latency
+!help - Show commands
+!serverinfo - Server information
+!userinfo - Your information
+!avatar - Show your avatar
+`);
+}
+
+if (message.content === "!serverinfo") {
+    return message.reply(
+        `📊 **${message.guild.name}**
+Members: ${message.guild.memberCount}
+Owner: <@${message.guild.ownerId}>`
+    );
+}
+
+if (message.content === "!userinfo") {
+    return message.reply(
+        `👤 **${message.author.tag}**
+ID: ${message.author.id}
+Joined: <t:${Math.floor(member.joinedTimestamp / 1000)}:R>`
+    );
+}
+
+if (message.content === "!avatar") {
+    return message.reply(message.author.displayAvatarURL({ size: 1024 }));
+}
 
     // Skip moderators
     if (member.permissions.has(PermissionsBitField.Flags.ManageMessages)) {
