@@ -62,6 +62,26 @@ if (message.content === "!avatar") {
     return message.reply(message.author.displayAvatarURL({ size: 1024 }));
 }
 
+if (message.content.startsWith("!clear")) {
+    ...
+}
+
+if (message.content.startsWith("!kick")) {
+    ...
+}
+
+if (message.content.startsWith("!ban")) {
+    ...
+}
+
+if (message.content.startsWith("!timeout")) {
+    ...
+}
+
+if (message.content.startsWith("!say")) {
+    ...
+}
+
     // Skip moderators
     if (member.permissions.has(PermissionsBitField.Flags.ManageMessages)) {
         return;
